@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    总价格：{{totalPrice}}
+  </div>
+</body>
+<script src="../js/vue.js"></script>    
+<script>
+  const app = new Vue({
+    el:'#app',
+    data:{
+      books:[
+        {id:110,name:'Unix编程艺术',price:119},
+        {id:111,name:'代码大全',price:119},
+        {id:112,name:'深入理解计算机',price:119},
+        {id:113,name:'现代操作系统',price:119},
+      ]
+    },
+    computed:{
+      totalPrice(){
+        let result = 0
+        for(let i=0; i < this.books.length; i++ ){
+          result += this.books[i].price
+        }
+        return result
+
+        // for(let i in this.books){
+           
+        // }
+        // for(let book of this.books){
+
+        // }
+      },
+    }
+  })
+</script>
+</html>
