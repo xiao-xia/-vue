@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //请求一：
+  let isResult1 = false;
+  let isResult2 = false;
+  $ajax({
+    url:"",
+    success:function(){
+      console.log('结果1');
+      isResult1 = true
+      handleResult()
+    }
+  })
+  //请求二：
+  $ajax({
+    url:"",
+    success:function(){
+      console.log('结果2');
+      isResult2 = true
+      handleResult()
+    }
+  })
+  function handleResult(){
+    if(isResult1 && isResult2){
+      
+    }
+  }
+</script>
+</body>
+</html>
